@@ -1,0 +1,85 @@
+<html>
+  <script>
+    var n1 = prompt("Enter an integer (a negative to quit)");
+    var arn = [];
+    let sum = 0;
+
+    while (n1 > 0 || isNaN(n1) == true || n1 == "") {
+      if (n1 % Math.floor(n1) == 0) {
+        arn.push(n1);
+      }
+      n1 = prompt("Enter the positive integer");
+    }
+    function readInput() {
+      const nuevo = arn.map((i) => Number(i));
+
+      for (let i = 0; i < nuevo.length; i++) {
+        sum += nuevo[i];
+        avg = sum / 2;
+      }
+      const b =
+        "for the list : " +
+        arn.toString() +
+        " the average is " +
+        avg +
+        " the minimum is " +
+        Math.min.apply(Math, arn) +
+        " the maximum is " +
+        Math.max.apply(Math, arn);
+      return b;
+    }
+
+    function displayStats(tex) {
+      alert(tex);
+    }
+
+    list = readInput();
+
+    if (n1 < 0) {
+      displayStats(list);
+    }
+  </script>
+  <style>
+    p,
+    li {
+      font-size: 25;
+    }
+    h2 {
+      font-size: 30;
+    }
+    h1 {
+      font-size: 40;
+    }
+  </style>
+  <head> </head>
+  <body>
+    <h2><center>Static Number</center></h2>
+    <h1>
+      Write the web app to prompt accepting for positive integers until the user
+      enters a negative integer
+    </h1>
+    <ul>
+      <li>
+        if the entered text is not a positive integer number, then the web app
+        will keep asking for a number until the valid positive integer is
+        entered
+      </li>
+      <li>
+        if the entered text is a negative integer, then the web app will show
+        the statistics (average, min, max) of all entered positive integers
+      </li>
+      <li>
+        If the user enters a negative integer as the first integer, the average,
+        the min, and the max is 0
+      </li>
+    </ul>
+    <h1>Note:</h1>
+    <p>
+      1.Implement these two functions list = readInput(); displayStats(list);
+    </p>
+    <p>
+      2.Use ternary operator (conditional operator ?) to handle in both cases
+      which the list is empty and is not empty
+    </p>
+  </body>
+</html>
