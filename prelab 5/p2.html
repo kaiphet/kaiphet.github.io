@@ -1,0 +1,57 @@
+<html>
+  <script>
+       var n1 = prompt("Enter an integer (a negative to quit)");
+       var arn = [];
+       let sum = 0;
+       while (n1 > 0 || isNaN(n1) == true || n1 == "") {
+           if (n1 % Math.floor(n1) ==0) {
+           arn.push(n1);
+           }
+         n1 = prompt("Enter the positive integer");
+               }
+           if(n1 < 0) {
+
+       const nuevo = arn.map((i) => Number(i));
+       alert(nuevo);
+           }
+    for (let i = 0; i < nuevo.length; i++) {
+       sum += nuevo[i];
+       avg = sum/2;
+       }
+       function displaystats() { 
+           alert("for the list : " + arn.toString() +" the average is " + avg +" the minimum is "+ Math.min.apply(Math,arn) + " the maximum is "+ Math.max.apply(Math,arn));
+           }
+           displaystats();
+  </script>
+  <style>
+    p,
+    li {
+      font-size: 25;
+    }
+    h2 {
+      font-size: 30;
+    }
+    h1 {
+      font-size: 40;
+    }
+  </style>
+  <head> </head>
+  <body>
+    <h2><center>Static Number</center></h2>
+    <h1>Write the web app to prompt accepting for a positive integer number</h1>
+    <ul>
+      <li>
+        If the entered text is not a positive integer number, then the web app
+        will keep asking for a number until the valid positive integer is
+        entered
+      </li>
+      <li>
+        If the entered text is a positive integer, then the app will print prime
+        numbers that are not greater than that given positive integer
+      </li>
+    </ul>
+    <h1>Hint:</h1>
+    <p>1. you may want to use loop with label</p>
+    <p>2. you may want to use array with push function</p>
+  </body>
+</html>

@@ -1,0 +1,55 @@
+<html>
+  <script>
+    var n1 = prompt("Enter the positive integer");
+    var arn = new Array();
+    while (n1 < 0 || isNaN(n1) == true || n1 === "" || n1 % 1 !==0 ) {
+      n1 = prompt("Enter the positive integer");
+    } 
+    check = isPrime(n1)
+    showPrimes(n1);
+    if (check === true) {
+        alert("For n = " + n1 + " prime number are " + arn.toString() + " This is a prime number");
+        } else {
+            alert("For n = " + n1 + " prime number are " + arn.toString());
+        }
+
+    function showPrimes(n) {
+      for (let i = 2; i < n; i++) {
+        if (isPrime(i)) {
+            arn.push(i);
+      }
+      }
+      return arn;
+    }
+
+    function isPrime(n) {
+      for (let i = 2; i < n; i++) {
+        if (n % i == 0) return false;
+      }
+      return true;
+    }
+  </script>
+  <style>
+    p, li {
+        font-size: 25;
+    }
+    h2 {
+        font-size: 30;
+    }
+    h1 {
+        font-size: 40;
+    }
+  </style>
+  <head> </head>
+  <body>
+  <h2> <center>Prime number finder</center> </h2>
+  <h1>Write the web app to prompt accepting for a positive integer number</h1>
+    <ul>
+    <li>If the entered text is not a positive integer number, then the web app will keep asking for a number until the valid positive integer is entered </li>
+    <li>If the entered text is a positive integer, then the app will print prime numbers that are not greater than that given positive integer</li>
+    </ul>
+    <h1>Hint:</h1> 
+    <p>1. you may want to use loop with label</p>
+    <p>2. you may want to use array with push function</p>
+  </body>
+</html>
